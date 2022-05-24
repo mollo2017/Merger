@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.textBoxLog = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -50,6 +51,7 @@
             this.textBoxLog.Location = new System.Drawing.Point(28, 142);
             this.textBoxLog.Multiline = true;
             this.textBoxLog.Name = "textBoxLog";
+            this.textBoxLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxLog.Size = new System.Drawing.Size(733, 296);
             this.textBoxLog.TabIndex = 0;
             // 
@@ -122,6 +124,7 @@
             this.Controls.Add(this.buttonOpen);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBoxLog);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Merger";
             this.Load += new System.EventHandler(this.Form1_Load);

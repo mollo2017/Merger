@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mZTVtKbGR47jkCo9XWI3X2KYFnbl9zYU3Ulan90jrPZkY+SgQsK9sN6H5+kSumd3YQbA1cBA4qiMYa2gS6URzw==",
+  "dgSpecHash": "P9AjKE/J3tHlEGGjQ94lPFRm+613uYgWoPk0t28heVT0lcYB/K2aEn7mt3FavEuOopRcBxoegr1Ft4pG9+wDbg==",
   "success": true,
   "projectFilePath": "C:\\Users\\mmendozv\\source\\repos\\Merger\\Merger\\Merger.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mmendozv\\.nuget\\packages\\xamarin.forms\\5.0.0.2401\\xamarin.forms.5.0.0.2401.nupkg.sha512"
+  ],
   "logs": []
 }

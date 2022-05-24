@@ -15,3 +15,7 @@ C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\refint\Mer
 C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.pdb
 C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.genruntimeconfig.cache
 C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\ref\Merger.dll
+C:\Users\mmendozv\source\repos\Merger\Merger\bin\Debug\net6.0-windows\Xamarin.Forms.Core.dll
+C:\Users\mmendozv\source\repos\Merger\Merger\bin\Debug\net6.0-windows\Xamarin.Forms.Platform.dll
+C:\Users\mmendozv\source\repos\Merger\Merger\bin\Debug\net6.0-windows\Xamarin.Forms.Xaml.dll
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.csproj.CopyComplete

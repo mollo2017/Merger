@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 
 namespace Merger
 {
@@ -6,6 +7,10 @@ namespace Merger
     {
         private string InPath = string.Empty;
         private string OutPath = string.Empty;
+        private string sepIni = @"/*********************************************************************************";
+        private string sepFin = @"*********************************************************************************/";
+        private string breakLine = Environment.NewLine;
+        private string tab = "\t";
         public Form1()
         {
             InitializeComponent();
@@ -39,7 +44,7 @@ namespace Merger
                 return;
             }
 
-
+            Merge();
         }
 
         private void Merge()
@@ -51,38 +56,57 @@ namespace Merger
                 List<string> Fls = FilesUtils.GetFileContentByLine(InPath);
                 foreach(string Fl in Fls)
                 {
-                    FileName = FilesUtils.GetFileName(Fl);
-                    WriteLog(FileName, "Trabajando", "", 2);
-                    Content = FilesUtils.GetFileContent(Fl);
-                    FilesUtils.WriteFile(OutPath, Content);
-                    WriteLog(FileName, "", Content, 3);
-                    WriteLog(FileName, "", Content, 1000);
+                    if(!string.IsNullOrEmpty(Fl))
+                    {
+                        FileName = FilesUtils.GetFileName(Fl);
+                        WriteLog(FileName, "Trabajando", "", 1);
+                        Content = GetheaderFile(FileName) + FilesUtils.GetFileContent(Fl);
+                        FilesUtils.WriteFile(OutPath, Content);
+                        WriteLog(FileName, "", Content, 3);
+                        WriteLog(FileName, "", Content, 1000);
+                    }
                 }
+                Process.Start("explorer.exe", OutPath.Replace(FilesUtils.GetFileName(OutPath), ""));
             }
             catch (Exception ex) 
             {
                 WriteLog(FileName, "Error", ex.Message, 2);
+                FilesUtils.DeleteFile(OutPath);
             }
-        }
 
+        }
+        private string GetheaderFile(string FileName)
+        {
+            string headerFile = string.Empty;
+            headerFile = string.Format(@"{2}{0}{2}{4}{4}{1}{2}{3}{2}", sepIni, FileName, breakLine, sepFin, tab);
+            return headerFile;
+        }
+        /// <summary>
+        /// Fuction to write a log of process
+        /// </summary>
+        /// <param name="FileName"> File Name</param>
+        /// <param name="Event">Event in process</param>
+        /// <param name="Des">Descrition of process or fail</param>
+        /// <param name="Op">Option to print in case of error or process header</param>
         private void WriteLog(string FileName, string Event, string Des, int Op)
         {
-            string sep = @"//*********************************************************************************";
             switch(Op)
             {
-                case 1:
+                case 1://Comentary
                     textBoxLog.ForeColor = Color.Black;
-                    textBoxLog.Text += string.Format("{0}\n\t\t{2} en {1}\n{0}\n", sep, FileName, Event);
+                    textBoxLog.Text += string.Format("{0}{3}{5}{5}{2} en {1}{3}{4}{3}", sepIni, FileName, Event, breakLine, sepFin, tab);
                     break;
-                case 2:
+                case 2://Fail
                     textBoxLog.ForeColor = Color.Red;
-                    textBoxLog.Text += string.Format("{0}\n\t\t{2} en {1}\n{0}\n{3}", sep, FileName, Event, Des);
+                    textBoxLog.Text += string.Format("{0}{4}{6}{6}{2} en {1}{4}{5}{4}{3}", sepIni, FileName, Event, Des, breakLine, sepFin, tab);
                     break;
-                case 3:
-                    textBoxLog.Text += (Des + "\n");
+                case 3://process
+                    textBoxLog.ForeColor = Color.Blue;
+                    textBoxLog.Text += string.Format("{0}{1}", Des, breakLine);
                     break;
                 default:
-                    textBoxLog.Text += "\n\n";
+                    textBoxLog.Text += breakLine;
+                    textBoxLog.Text += breakLine;
                     break;
             }
         }
