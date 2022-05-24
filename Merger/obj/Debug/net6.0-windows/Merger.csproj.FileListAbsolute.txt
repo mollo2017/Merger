@@ -1,0 +1,17 @@
+C:\Users\mmendozv\source\repos\Merger\Merger\bin\Debug\net6.0-windows\Merger.exe
+C:\Users\mmendozv\source\repos\Merger\Merger\bin\Debug\net6.0-windows\Merger.deps.json
+C:\Users\mmendozv\source\repos\Merger\Merger\bin\Debug\net6.0-windows\Merger.runtimeconfig.json
+C:\Users\mmendozv\source\repos\Merger\Merger\bin\Debug\net6.0-windows\Merger.dll
+C:\Users\mmendozv\source\repos\Merger\Merger\bin\Debug\net6.0-windows\Merger.pdb
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.csproj.AssemblyReference.cache
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.Form1.resources
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.csproj.GenerateResource.cache
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.AssemblyInfoInputs.cache
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.AssemblyInfo.cs
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.csproj.CoreCompileInputs.cache
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.dll
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\refint\Merger.dll
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.pdb
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\Merger.genruntimeconfig.cache
+C:\Users\mmendozv\source\repos\Merger\Merger\obj\Debug\net6.0-windows\ref\Merger.dll
